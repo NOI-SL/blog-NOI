@@ -1,0 +1,20 @@
+language: ruby
+rvm:
+  - 2.4.1
+script:
+  - if [ "$TRAVIS_BRANCH" == "master" ]; then bundle exec jekyll build; else bundle exec jekyll build; fi
+branches:
+  only:
+    - master
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN
+  keep-history: true
+  local-dir: _site
+  repo: SLIOI/blog
+  target-branch: master
+  verbose: true
+  on:
+    repo: SLIOI/blog-NOI
+    branch: master
