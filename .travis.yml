@@ -3,6 +3,7 @@ rvm:
   - 2.4.1
 script:
   - gem install bundler:2.0.1
+  - bundle update --bundler
   - if [ "$TRAVIS_BRANCH" == "master" ]; then bundle exec jekyll build; else bundle exec jekyll build; fi
 branches:
   only:
