@@ -1,8 +1,12 @@
 language: ruby
 rvm:
   - 2.4.1
+before_install:
+  - gem update --system
+  - gem install bundler
+  - bundle install
 script:
-  - if [ "$TRAVIS_BRANCH" == "master" ]; then gem install bundler:2.0.1; bundle exec jekyll build; else bundle exec jekyll build; fi
+  - if [ "$TRAVIS_BRANCH" == "master" ]; then bundle exec jekyll build; else bundle exec jekyll build; fi
 branches:
   only:
     - master
