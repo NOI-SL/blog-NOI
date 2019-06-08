@@ -7,6 +7,7 @@ before_install:
   - bundle install
 script:
   - if [ "$TRAVIS_BRANCH" == "master" ]; then bundle exec jekyll build; else bundle exec jekyll build; fi
+cache: bundler
 branches:
   only:
     - master
@@ -16,7 +17,7 @@ deploy:
   github-token: $GITHUB_TOKEN
   keep-history: true
   local-dir: _site
-  repo: SLIOI/blog
+  repo: SLIOI/blog.noi.github.io
   target-branch: master
   verbose: true
   on:
