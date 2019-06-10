@@ -1,0 +1,31 @@
+body{
+    font-family: 'Nunito', sans-serif !important;
+    color: white;
+}
+.nav-link{
+    color: white !important;
+}
+.nav-link:hover{
+    color: #38bfae !important;
+}
+.bg-purple{
+    background-color: #5e35b0 !important;
+}
+.image-bg{
+    background-image: url("img/banner.png");
+    overflow: hidden;
+    background-repeat:no-repeat;
+    background-size: cover;
+    height: 40vh;
+}
+.white-theme{
+    color: white !important;
+}
+.nav-text {
+    vertical-align:middle;
+}
+@media (max-width: 539px) {
+    img {
+        display: none;
+    }
+}
