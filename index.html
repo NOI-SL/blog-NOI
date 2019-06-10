@@ -1,0 +1,188 @@
+---
+title: Blog
+---
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Begin Jekyll SEO tag v2.6.1 -->
+  <title>Blog | NOI</title>
+  <meta name="generator" content="Jekyll v3.8.5" />
+  <meta property="og:title" content="Your awesome title" />
+  <meta property="og:locale" content="en_US" />
+  <meta name="description" content="Official website of National Olympiad in Informatics" />
+  <meta property="og:description" content="Official website of National Olympiad in Informatics" />
+  <link rel="canonical" href="http://localhost:4000/" />
+  <meta property="og:url" content="http://localhost:4000/" />
+  <meta property="og:site_name" content="Your awesome title" />
+  <script type="application/ld+json">
+{"name":"Your awesome title","description":"Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.","@type":"WebSite","url":"http://localhost:4000/","headline":"Your awesome title","@context":"https://schema.org"}</script>
+  <!-- End Jekyll SEO tag -->
+  <!--Icon-->
+  <link rel="shortcut icon" href="./assets/img/icon.png" type="image/x-icon">
+  <!--Custom Styling-->
+  <link rel="stylesheet" href="assets/style.css">
+  <!--Bootstrao-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!--Material Icons-->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <!--Nunito-->
+  <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+  <!--Animate CSS-->
+  <link href="./assets/animate.css" rel="stylesheet">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-purple sticky-top"
+    style="background-color: #5e35b0 !important; color: white">
+    <a class="navbar-brand" href="#">
+      <img src="assets/img/noilogo.png" width="100" class="d-inline-block align-top" alt="">
+
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto" style="margin-left: 4vw;">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">News</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Announcements</a>
+        </li>
+      </ul>
+      <!--
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit"
+          style="color: white;background-color: transparent;border-color: white;">Search</button>
+      </form>
+    -->
+    </div>
+  </nav>
+
+  <!--Banner Image-->
+  <div class="row image-bg white-theme align-self-center">
+    <div class="d-flex p-2 bd-highlight flex-column justify-content-center ml-5 animated fadeInLeft">
+      <h1 style="font-size: 6rem !important;">NOI</h1>
+      <h4>National Olympiad in Informatics</h4>
+    </div>
+    <div class="d-flex float-right hidden-md">
+        <img src="assets/img/NOI-pet.svg">
+    </div>
+  </div>
+
+  <!--Post Section-->
+  <div class="container-fluid">
+    <div class="row">
+  
+      <div class="col-md-2 col-0"></div>
+  
+      <div class="col-md-8 col-12">
+        <!--Post card-->
+        <ul style="list-style: none; padding-left: 0">
+          {% for post in site.posts %}
+          <li>
+            <div class="d-flex justify-content-center ml-md-5 mt-5 flex-column animated fadeInUp">
+              <h1>{{post.title}}</h1>
+              <h6 class="font-italic">{{post.posted}}</h6>
+              <i class="material-icons" style="display: inline">person</i>
+              <h4>{{ post.author }}</h4>
+              <br>
+              <p>
+                {{ post.excerpt }}
+              </p>
+              <h6 class="font-italic" style="color: #5e35b0"><a href="{{ post.url }}">Read More</a></h6>
+            </div>
+            <hr size="30">
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+  
+      <div class="col-md-2 col-0"></div>
+  
+    </div>
+  </div>
+
+  <!--Footer-->
+  <footer class="page-footer font-small p-2 white-theme" style="background-color: #5e35b0;">
+  
+    <!-- Footer Links -->
+    <div class="container text-center text-md-left mt-5" >
+  
+      <!-- Grid row -->
+      <div class="row mt-3">
+  
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+  
+          <!-- Content -->
+          <h6 class="text-uppercase font-weight-bold">National Olympiad in Informatics</h6>
+          <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: white">
+          <p>The National Olympiad in Informatics is the Sri Lanka’s leading computing competition for the secondary school
+            students. At NOI, contestants have to write programs in C++, Pascal or Java to solve a set of problems within a
+            specified time limit.
+          </p>
+        </div>
+  
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase font-weight-bold">Recent</h6>
+          <hr class=" accent-2 mb-4 mt-0 d-inline-block mx-auto " style="width: 60px; background-color: white">
+          <p><a href="#!" class="white-theme">MDBootstrap</a></p>
+          <p><a href="#!" class="white-theme">MDWordPress</a></p>
+          <p><a href="#!" class="white-theme">BrandFlow</a></p>
+          <p><a href="#!" class="white-theme">Bootstrap Angular</a></p>
+        </div>
+  
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase font-weight-bold">Useful links</h6>
+          <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: white">
+          <p><a href="#!" class="white-theme">Homepage</a></p>
+          <p><a href="#!" class="white-theme">IOI</a></p>
+          <p><a href="#!" class="white-theme">Resources</a></p>
+          <p><a href="#!" class="white-theme">Contact</a></p>
+        </div>
+
+      </div>
+  
+    </div>
+    <!-- Footer Links -->
+  
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">Copyright © 2019 NOI. All right reserved.</div>
+    <!-- Copyright -->
+  
+  </footer>
+  <!-- Footer -->
+
+  <!--Bootstrap-->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <!--Popper-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <!--Jquery-->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
