@@ -16,7 +16,7 @@
 title: National Olympiad in Informatics
 email: info@noi.lk
 description: >- # this means to ignore newlines until "baseurl:"
-  The National Olympiad in Informatics is the Sri Lanka’s leading computing competition for the secondary school students. At NOI, contestants have to write programs in C++, Pascal or Java to solve a set of problems within a specified time limit.
+    The National Olympiad in Informatics is the Sri Lanka’s leading computing competition for the secondary school students. At NOI, contestants have to write programs in C++, Pascal or Java to solve a set of problems within a specified time limit.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://slioi.github.io/blog.noi.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: NOISL4

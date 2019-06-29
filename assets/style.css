@@ -13,7 +13,6 @@ body{
 }
 .image-bg{
     background-image: url("img/banner.png");
-    overflow: hidden;
     background-repeat:no-repeat;
     background-size: cover;
     height: 40vh;
@@ -23,9 +22,4 @@ body{
 }
 .nav-text {
     vertical-align:middle;
-}
-@media (max-width: 539px) {
-    img {
-        display: none;
-    }
 }
